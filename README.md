@@ -4,7 +4,7 @@ Version 1.0
 Created by Talita James on the 26/05/2022
 Last updated 26/05/2022
 
-_a silly little python game that tests your number recolation both forward and backwards_
+_a silly little python game that tests your number recollection both forward and backwards_
 
 
 ## Installation
