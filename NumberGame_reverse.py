@@ -40,14 +40,15 @@ def markInput(userInput, listReverse):
     return correct
 
 if __name__ == "__main__":
-    gameIntro()
+    # gameIntro()
     correct = True
-    level=0
+    roundNum=0
+    levels = [2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9]
     while correct:
-        level+=1
-        numbers=randList(level) #returns numbers[0] = rngList and numbers[1] is the reverse
+        
+        numbers=randList(levels[roundNum]) #returns numbers[0] = rngList and numbers[1] is the reverse
 
-        TextRead = "Round "+str(level) +".   "+ str(numbers[0])
+        TextRead = "Round "+str(roundNum) +".   "+ str(numbers[0])
 
 
         readFile(TextRead)
@@ -55,5 +56,6 @@ if __name__ == "__main__":
         
         correct = markInput(input("Please write the number you heard backwards:\n"), numbers[1])
         print("\n\n")
+        roundNum+=1
     
-    readFile("That is incorrect. You made it to level "+str(level)+".")
+    readFile("That is incorrect. You made it to level "+str(roundNum)+".")
